@@ -114,7 +114,8 @@ def main():
     parser.add_argument("--list-tools", action="store_true", help="List available tools on the 21st.dev MCP server")
     parser.add_argument("--call", type=str, help="Name of the MCP tool to call (e.g., 21st_magic_search)")
     parser.add_argument("--args", type=str, default="{}", help="JSON string of arguments for the tool call")
-    parser.add_argument("--api-key", type=str, default=os.environ.get("API_KEY", ""), help="21st.dev API Key")
+    api_key_default = os.environ.get("API_KEY") or os.environ.get("TWENTY_FIRST_API_KEY") or os.environ.get("API_KEY_21ST", "")
+    parser.add_argument("--api-key", type=str, default=api_key_default, help="21st.dev API Key")
 
     args = parser.parse_args()
 

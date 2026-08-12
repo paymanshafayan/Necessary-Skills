@@ -33,13 +33,15 @@
 
 ---
 
-### 📋 فایل‌های پرامپت (دستورالعمل مدل‌های هوش مصنوعی)
+### 📋 فایل پرامپت واحد و جامع (Single Unified AI Agent System Prompt)
 
-برای اینکه هر مدل هوش مصنوعی (مانند Claude, GPT-4o, Gemini, Cursor, DeepSeek, Qwen و غیره) بداند چگونه از این امکانات برای ساخت یک وب‌سایت مدرن، تمیز و عالی استفاده کند، سه فایل دستورالعمل کلیدی در ریشه مخزن ساخته شده است:
+برای اینکه من (عامل هوش مصنوعی در Arena) یا هر مدل هوش مصنوعی دیگری (مانند Claude, GPT-4o, Gemini, Cursor, DeepSeek, Qwen و غیره) بداند چگونه از این امکانات برای ساخت یک وب‌سایت مدرن، تمیز و عالی استفاده کند، **یک فایل پرامپت واحد و جامع** در ریشه مخزن ساخته شده است:
 
-1. 📄 **`PROMPT_FA.md`** — **پرامپت کامل به زبان فارسی** با جزئیات دقیق، قوانین ۱۰ اولویت تجربه کاربری، ضدالگوها و چک‌لیست نهایی پیش از تحویل پروژه.
-2. 📄 **`PROMPT.md`** — **پرامپت کامل به زبان انگلیسی** (استاندارد جهانی مدل‌های زبانی) برای درک بدون نقص کلمات کلیدی فنی و معماری فرانت‌اند.
-3. 📄 **`WEB_DESIGN_PROMPT.md`** — **کتابخانه پرامپت‌ها و راهنمای شروع سریع دو زبانه** برای قرار دادن در تنظیمات IDEها و دستیارها.
+- 📄 **`PROMPT.md`** — **پرامپت واحد و جامع (Single Unified Prompt)**:  
+  هر بار که خواستید وب‌سایت یا رابط کاربری ساخته شود، **فقط آدرس همین فایل (`PROMPT.md`)** را به مدل هوش مصنوعی بدهید. این فایل به مدل دستور می‌دهد:
+  1. دیزاین سیستم (رنگ‌ها، سبک‌های ۸۴گانه، تایپوگرافی‌های ۷۴گانه و قوانین UX) را از `ui-ux-pro-max` استخراج کند.
+  2. کامپوننت‌های مدرن را با استفاده از متغیر محیطی / Secret ذخیره‌شده با نام **`API_KEY`** و از طریق سرور MCP سایت 21st.dev (`21st-magic`) دریافت کند.
+  3. کامپوننت دریافتی را بلافاصله بر اساس توکن‌های پروژه بومی‌سازی و سفارشی‌سازی (Customize) کند.
 
 ---
 
@@ -110,13 +112,11 @@ The `ui-ux-pro-max/` folder (along with auto-discovery paths in `.claude/skills/
 
 ---
 
-### 📖 AI Model System Prompt Files
+### 📖 Single Unified AI System Prompt (`PROMPT.md`)
 
-To instruct any LLM on how to apply these features when building websites, use the following System Prompts located in the root directory:
+To instruct any LLM on how to build modern websites by uniting both **UI/UX Pro Max** design intelligence and **21st.dev Magic MCP Server (`21st-magic`)** components, pass **only the single unified prompt file**:
 
-1. **`PROMPT.md`** — Master AI System Prompt (English) detailing the 7-step design workflow, 10 priority UX rules, anti-pattern elimination, and pre-delivery inspection checklist.
-2. **`PROMPT_FA.md`** — Complete Persian AI System Prompt (`پرامپت کامل طراحی وب‌سایت به زبان فارسی`).
-3. **`WEB_DESIGN_PROMPT.md`** — Bilingual Quick-Start Prompt Index & Config Templates for IDEs (Cursor, Windsurf, Claude Code, Copilot, etc.).
+- **`PROMPT.md`** — The canonical Single Unified AI Agent System Prompt (with Persian quick reference). Instructs agents to establish visual truth from `ui-ux-pro-max/`, fetch components from 21st.dev using **`API_KEY`** (`ui-ux-pro-max/scripts/magic_21st.py`), and immediately customize imported components to enforce 4.5:1 contrast, SVG icons, `cursor-pointer`, and 150-300ms smooth transitions.
 
 ---
 
@@ -124,9 +124,7 @@ To instruct any LLM on how to apply these features when building websites, use t
 
 ```
 Necessary-Skills/
-├── PROMPT.md                     # Master English AI System Prompt
-├── PROMPT_FA.md                  # Master Persian AI System Prompt (فارسی)
-├── WEB_DESIGN_PROMPT.md          # Bilingual Prompt Library & Snippets
+├── PROMPT.md                     # Single Unified Master AI System Prompt
 ├── MCP_CONFIG.json               # 21st.dev Magic MCP Server Config Guide
 ├── README.md                     # Repository Overview (This file)
 ├── ui-ux-pro-max/                # Core Skill Installation Folder
