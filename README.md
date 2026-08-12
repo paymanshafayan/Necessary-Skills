@@ -63,6 +63,28 @@ python3 ui-ux-pro-max/scripts/search.py "responsive layout" --stack html-tailwin
 
 ---
 
+### ⚡ ترکیب با MCP Server سایت 21st.dev (`21st-magic`)
+
+اگر از دستیارهای هوش مصنوعی مانند **Cursor**, **Windsurf** یا **Claude Desktop** استفاده می‌کنید، می‌توانید با افزودن تنظیمات زیر (موجود در فایل `MCP_CONFIG.json`) به محیط خود، از کامپوننت‌های مدرن سایت 21st.dev در کنار دیزاین سیستم UI/UX Pro Max استفاده کنید:
+
+```json
+{
+  "mcpServers": {
+    "21st-magic": {
+      "command": "cmd.exe",
+      "args": ["/c", "npx", "-y", "@21st-dev/magic@latest"],
+      "env": {
+        "API_KEY": "کلید_ای_پی_آی_شما_از_سایت_21st"
+      }
+    }
+  }
+}
+```
+**پروتکل استفاده همزمان (Synergy Protocol):**  
+مدل هوش مصنوعی ابتدا سبک بصری، پالت رنگی و ترکیب فونت را از `ui-ux-pro-max` استخراج می‌کند، سپس کامپوننت‌های پیشرفته را از طریق `21st-magic` جستجو و دریافت کرده و در نهایت استایل کامپوننت را با توکن‌های پروژه سفارشی‌سازی (Customize) می‌کند.
+
+---
+
 ## 🇺🇸 English Guide
 
 Welcome to **Necessary-Skills**, a curated repository of AI skills, design systems, and agent system prompts for modern web development and software engineering.
@@ -104,6 +126,7 @@ Necessary-Skills/
 ├── PROMPT.md                     # Master English AI System Prompt
 ├── PROMPT_FA.md                  # Master Persian AI System Prompt (فارسی)
 ├── WEB_DESIGN_PROMPT.md          # Bilingual Prompt Library & Snippets
+├── MCP_CONFIG.json               # 21st.dev Magic MCP Server Config Guide
 ├── README.md                     # Repository Overview (This file)
 ├── ui-ux-pro-max/                # Core Skill Installation Folder
 │   ├── SKILL.md                  # Canonical Skill Metadata

@@ -215,7 +215,26 @@ The `typography.csv` dataset provides 74 curated Google Fonts pairings with font
 
 ---
 
-## 🚫 5. CANONICAL ANTI-PATTERNS (WHAT NOT TO DO)
+## ⚡ 5. USING THE `@21st-dev/magic` MCP SERVER WITH UI/UX PRO MAX (SYNERGY WORKFLOW)
+
+If your environment (such as Cursor, Windsurf, or Claude Desktop) has configured the **`21st-magic`** MCP server (`@21st-dev/magic`), you have a powerful synergy at your disposal. Combine `ui-ux-pro-max` design intelligence with `21st-magic` component retrieval using this 3-step protocol:
+
+### The 3-Step Synergy Protocol
+1. **Step 1 — Establish the Design System via `ui-ux-pro-max` (Visual Source of Truth)**:
+   - First, determine the project's UI Style (84 styles), Color Palette (192 palettes), and Typography Pairing (74 pairings) from `ui-ux-pro-max` as described above.
+2. **Step 2 — Retrieve Components via MCP (`21st-magic`)**:
+   - When building complex page sections (Hero Section, Pricing Table, Navbar, Bento Grid, Animated Card, Sidebar, Footer), call the `21st-magic` MCP server tools to search and fetch modern, production-grade components from 21st.dev.
+3. **Step 3 — Customize & Stylize the Component (Mandatory AI Guardrail)**:
+   - **NEVER** leave an imported `21st-magic` component unchanged. You MUST immediately refactor its styling to match the project's design system:
+     - Replace hardcoded or default colors with your semantic CSS variables (`--color-primary`, `--color-background`, `--color-accent`, etc.).
+     - Apply your project's `Heading Font` and `Body Font`.
+     - Enforce accessibility & UX guardrails: replace decorative emojis with inline SVG icons (Lucide/Heroicons), ensure `cursor-pointer` on clickable items, verify 150–300ms smooth hover/focus transitions, and confirm a 4.5:1 text contrast ratio.
+
+> **MCP Server Configuration**: See `MCP_CONFIG.json` in the root of this repository for copy-paste configuration examples for Windows (`cmd.exe`) and macOS/Linux (`npx`).
+
+---
+
+## 🚫 6. CANONICAL ANTI-PATTERNS (WHAT NOT TO DO)
 
 When creating a website, **STRICTLY AVOID** these common AI mistakes:
 - ❌ **No Emojis as UI Icons**: Do not use `🚀`, `⭐`, `📊`, or `✨` as button or navigation icons. Always use inline SVG vector icons.
@@ -226,7 +245,7 @@ When creating a website, **STRICTLY AVOID** these common AI mistakes:
 
 ---
 
-## ✅ 6. MANDATORY PRE-DELIVERY CHECKLIST
+## ✅ 7. MANDATORY PRE-DELIVERY CHECKLIST
 
 Before completing your response and presenting a web design deliverable, verify that your code satisfies this checklist:
 - [ ] **No emojis as UI icons** (used crisp SVG icons instead).
@@ -239,24 +258,26 @@ Before completing your response and presenting a web design deliverable, verify 
 - [ ] **Semantic HTML5 structure** (`<header>`, `<main>`, `<nav>`, `<footer>`).
 - [ ] **Typography Google Fonts link imported and applied** (`typography.csv`).
 - [ ] **Semantic color palette variables implemented** (`colors.csv`).
+- [ ] **Retrieved `21st-magic` MCP components customized to match project design system**.
 
 ---
 
-## 💡 7. PROMPT EXAMPLES FOR TESTING
+## 💡 8. PROMPT EXAMPLES FOR TESTING
 
 When users prompt you with requests like the following, immediately activate this **UI/UX Pro Max Web Design Workflow**:
 
 - *"Build a landing page for my SaaS product"* -> Apply **Tech & SaaS reasoning rules**, *Hero-Centric + Social Proof* pattern, *Glassmorphism or Flat Design* style, and *Plus Jakarta Sans* typography.
 - *"Create a dashboard for healthcare analytics"* -> Apply **Healthcare reasoning rules**, *Data-Dense or Executive Dashboard* pattern, *Neumorphism or Accessible & Ethical* style, and high-contrast WCAG AAA color palette.
-- *"Design a portfolio website with dark mode"* -> Apply **Creative reasoning rules**, *Dark Mode (OLED) or Minimal & Direct* pattern, *Cormorant Garamond or Inter* font pairing, and sleek 150-300ms micro-interactions.
+- *"Design a portfolio website with dark mode"* -> Apply **Creative reasoning rules**, *Dark Mode (OLED) or Minimal & Direct* pattern, *Cormorant Garamond / Inter* font pairing, and sleek 150-300ms micro-interactions.
 - *"Build a fintech banking app"* -> Apply **Finance reasoning rules**, *Trust & Authority* pattern, *IBM Plex Sans* typography, and *Accessible & Ethical* style.
 
 ---
 
-## 🔗 8. SUMMARY & REFERENCES
+## 🔗 9. SUMMARY & REFERENCES
 
 - **Skill Root**: `ui-ux-pro-max/` (also `.claude/skills/ui-ux-pro-max`, `.cursor/skills/ui-ux-pro-max`, `.agents/skills/ui-ux-pro-max`)
 - **Search CLI**: `python3 ui-ux-pro-max/scripts/search.py "<query>" --design-system`
 - **Full Rules Reference**: `ui-ux-pro-max/references/quick-reference.md`
 - **Pro Polish Rules & Accessibility Checklist**: `ui-ux-pro-max/references/pro-rules.md`
 - **Persian Guide / راهنمای فارسی**: See `PROMPT_FA.md` in this repository for full Persian documentation.
+- **MCP Server Config Guide**: `MCP_CONFIG.json`
