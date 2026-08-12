@@ -231,6 +231,7 @@ If your environment (such as Cursor, Windsurf, or Claude Desktop) has configured
      - Enforce accessibility & UX guardrails: replace decorative emojis with inline SVG icons (Lucide/Heroicons), ensure `cursor-pointer` on clickable items, verify 150–300ms smooth hover/focus transitions, and confirm a 4.5:1 text contrast ratio.
 
 > **MCP Server Configuration**: See `MCP_CONFIG.json` in the root of this repository for copy-paste configuration examples for Windows (`cmd.exe`) and macOS/Linux (`npx`).
+> **CLI / Headless AI Agent Usage (e.g., Arena Agent Mode / Terminal)**: If the AI model operates in a headless bash/CLI environment without an IDE MCP client, it can use the bridge script: `python3 ui-ux-pro-max/scripts/magic_21st.py --api-key "YOUR_KEY" --call 21st_magic_search --args '{"query": "navbar"}'` to search and retrieve 21st.dev components directly via stdio JSON-RPC.
 
 ---
 
