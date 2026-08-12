@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/mcp.json",
+  "_comment_fa": "راهنمای تنظیمات MCP Server برای استفاده همزمان از 21st.dev Magic و دیزاین سیستم UI/UX Pro Max",
+  "_comment_en": "MCP Server configuration example to combine 21st.dev Magic components with UI/UX Pro Max design intelligence",
+  
+  "windows_example": {
+    "mcpServers": {
+      "21st-magic": {
+        "command": "cmd.exe",
+        "args": ["/c", "npx", "-y", "@21st-dev/magic@latest"],
+        "env": {
+          "API_KEY": "YOUR_21ST_API_KEY_HERE"
+        }
+      }
+    }
+  },
+
+  "macos_linux_example": {
+    "mcpServers": {
+      "21st-magic": {
+        "command": "npx",
+        "args": ["-y", "@21st-dev/magic@latest"],
+        "env": {
+          "API_KEY": "YOUR_21ST_API_KEY_HERE"
+        }
+      }
+    }
+  },
+
+  "usage_instructions": {
+    "cursor": "Copy the windows_example or macos_linux_example object into your project's .cursor/mcp.json or Cursor -> Settings -> MCP",
+    "claude_desktop": "Add the 21st-magic entry to your ~/.claude/claude_desktop_config.json under mcpServers",
+    "windsurf": "Add the 21st-magic entry to ~/.codeium/windsurf/mcp_config.json under mcpServers",
+    "synergy_protocol": "AI models should use 21st-magic tools to search and fetch components from 21st.dev, then customize them using the styles, colors, and typography from ui-ux-pro-max in PROMPT.md"
+  }
+}
